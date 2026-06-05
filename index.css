@@ -3,7 +3,7 @@
     src: url(font/MOSCOW2024.otf);
 }
 body {
-      background-image: url('background2.jpg');
+      background-image: url('background.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
