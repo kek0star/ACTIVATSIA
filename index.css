@@ -3,11 +3,18 @@
     src: url(font/MOSCOW2024.otf);
 }
 body {
-      background-image: url('background2.jpg');
+      background-image: url('background.jpg');
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
       font-family: 'Moscow2024', Moscow2024 , monospace;
       text-align: center;
-      padding-top: 10px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
       font-size: 20px;
 }
 
@@ -16,8 +23,31 @@ body {
       gap: 3ch;
       justify-content: center;
       align-items: center;
+      flex-wrap: nowrap;
 }
 
 .timer {
-      display: inline-block;
+                  display: inline-block;
+}
+
+/* Responsive images and general tweaks */
+img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+}
+
+/* Reduce spacing on very small screens */
+@media (max-width: 420px) {
+      body {
+            font-size: 18px;
+      }
+      .countdown_timer {
+            gap: 1.5ch;
+      }
+      .timer h2 {
+            font-size: 1.1em;
+            margin: 0;
+      }
 }
