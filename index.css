@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Moscow2024;
+    src: url(font/MOSCOW2024.otf);
+}
+body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      font-family: 'Moscow2024', Moscow2024 , monospace;
+      text-align: center;
+      padding-top: 10px;
+      font-size: 20px;
+}
+
+.countdown_timer {
+      display: inline-flex;
+      gap: 3ch;
+      justify-content: center;
+      align-items: center;
+}
+
+.timer {
+      display: inline-block;
+}
