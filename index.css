@@ -34,7 +34,84 @@ body {
 
 /* Таймер: числа белые и крупнее */
 .timer h2 {
-      color: #fff;
+                  color: #39FF14;
+                  font-size: 36px;
+      line-height: 1;
+      margin: 0;
+}
+
+/* Активная зелёная подсветка для заголовка и таймера */
+.activation-text {
+      color: #39FF14;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 8px;
+}
+
+.timer.green h2,
+.timer.green {
+      color: #39FF14;
+}
+
+.webrings-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+}
+.webrings-row img {
+      width: 56px;
+      height: auto;
+      display: inline-block;
+}
+
+@media (max-width: 420px) {
+      .webrings-row img {
+            width: 40px;
+      }
+}
+
+/* Stars row at the end */
+.stars-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+}
+.stars-row img {
+      width: 56px;
+      height: auto;
+      display: inline-block;
+}
+
+@media (max-width: 420px) {
+      .stars-row img {
+            width: 36px;
+      }
+}
+
+/* Responsive images and general tweaks */
+img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+}
+
+/* Reduce spacing on very small screens */
+@media (max-width: 420px) {
+      body {
+            font-size: 20px;
+      }
+      .countdown_timer {
+            gap: 1.5ch;
+      }
+      .timer h2 {
+            font-size: 28px;
+            margin: 0;
+      }
+}      color: #fff;
       font-size: 36px;
       line-height: 1;
       margin: 0;
