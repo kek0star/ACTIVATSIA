@@ -1,6 +1,7 @@
 @font-face {
     font-family: Moscow2024;
     src: url(font/MOSCOW2024.otf);
+    
 }
 body {
       background-image: url('background.jpg');
@@ -15,7 +16,8 @@ body {
       justify-content: center;
       align-items: center;
       padding: 10px;
-      font-size: 20px;
+      font-size: 22px;
+      color: #000; /* основной цвет текста — чёрный */
 }
 
 .countdown_timer {
@@ -27,7 +29,15 @@ body {
 }
 
 .timer {
-                  display: inline-block;
+      display: inline-block;
+}
+
+/* Таймер: числа белые и крупнее */
+.timer h2 {
+      color: #fff;
+      font-size: 36px;
+      line-height: 1;
+      margin: 0;
 }
 
 /* Responsive images and general tweaks */
@@ -41,13 +51,13 @@ img {
 /* Reduce spacing on very small screens */
 @media (max-width: 420px) {
       body {
-            font-size: 18px;
+            font-size: 20px;
       }
       .countdown_timer {
             gap: 1.5ch;
       }
       .timer h2 {
-            font-size: 1.1em;
+            font-size: 28px;
             margin: 0;
       }
 }
