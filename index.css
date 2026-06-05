@@ -16,7 +16,7 @@ body {
       justify-content: center;
       align-items: center;
       padding: 10px;
-      font-size: 22px;
+      font-size: 44px; /* увеличиваем текст в 2 раза */
       color: #000; /* основной цвет текста — чёрный */
 }
 
@@ -34,8 +34,8 @@ body {
 
 /* Таймер: числа белые и крупнее */
 .timer h2 {
-                  color: #39FF14;
-                  font-size: 36px;
+      color: #39FF14;
+      font-size: 72px; /* удвоено */
       line-height: 1;
       margin: 0;
 }
@@ -60,14 +60,14 @@ body {
       align-items: center;
 }
 .webrings-row img {
-      width: 56px;
+      width: 112px; /* удвоено */
       height: auto;
       display: inline-block;
 }
 
 @media (max-width: 420px) {
       .webrings-row img {
-            width: 40px;
+            width: 80px; /* удвоено */
       }
 }
 
@@ -80,14 +80,14 @@ body {
       margin-top: 8px;
 }
 .stars-row img {
-      width: 56px;
+      width: 112px; /* удвоено */
       height: auto;
       display: inline-block;
 }
 
 @media (max-width: 420px) {
       .stars-row img {
-            width: 36px;
+            width: 72px; /* удвоено */
       }
 }
 
@@ -102,39 +102,21 @@ img {
 /* Reduce spacing on very small screens */
 @media (max-width: 420px) {
       body {
-            font-size: 20px;
+            font-size: 40px;
       }
       .countdown_timer {
             gap: 1.5ch;
       }
       .timer h2 {
-            font-size: 28px;
+            font-size: 56px;
             margin: 0;
       }
-}      color: #fff;
-      font-size: 36px;
-      line-height: 1;
-      margin: 0;
 }
 
-/* Responsive images and general tweaks */
-img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-}
-
-/* Reduce spacing on very small screens */
-@media (max-width: 420px) {
-      body {
-            font-size: 20px;
-      }
-      .countdown_timer {
-            gap: 1.5ch;
-      }
-      .timer h2 {
-            font-size: 28px;
-            margin: 0;
-      }
+/* Исключение: faetalePu.gif оставляем без изменений */
+.faetale {
+  width: auto;
+  max-width: none;
+  height: auto;
+  display: inline-block;
 }
