@@ -1,50 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-  <title>Ночная активация</title>
-<link rel="stylesheet" href="index.css">
-  
-  
-</head>
-<body>
+@font-face {
+    font-family: Moscow2024;
+    src: url(font/MOSCOW2024.otf);
+    
+}
+body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      font-family: 'Moscow2024', Moscow2024 , monospace;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* start from top so верхние элементы видны */
+      align-items: center;
+                  padding: 10px;
+      font-size: 44px; /* увеличиваем текст в 2 раза */
+      color: #000; /* основной цвет текста — чёрный */
+}
 
-  <img src="faetalePu.gif" alt="FaetalePu" class="faetale"> <br>
-  <div class="webrings-row">
-    <img src="webrings.gif" alt="Web Rings">
-    <img src="webrings.gif" alt="Web Rings">
-    <img src="webrings.gif" alt="Web Rings">
-  </div>
-    <p>
-    Соединение установлено. <br>
-    Лунный канал открыт.<br>
-    Сигнал обнаружен и сохранён.<br><br>
+html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+}
 
-    Ваше имя добавлено <br>
-    в список получателей.<br>
-    Передача начнется, когда город уснет,<br>
-    а стрелки часов встретятся в полночь.<br><br>
+.content {
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* start from top */
+      align-items: center;
+      padding: 10px;
+}
 
-    <span class="activation-text">До активации осталось:</span>
-<div class="countdown_timer">
-  <div class="timer"><h2 id="day">00</h2></div>
-  <div class="timer"><h2 id="hour">00</h2></div>
-  <div class="timer"><h2 id="minute">00</h2></div>
-  <div class="timer"><h2 id="second">00</h2></div>
-</div>
-<script src="script.js"></script>
-</div>
+.countdown_timer {
+      display: inline-flex;
+      gap: 3ch;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+}
 
+.timer {
+      display: inline-block;
+}
 
-<div class="webrings-row">
-  <img src="webrings.gif" alt="Web Rings">
-  <img src="webrings.gif" alt="Web Rings">
-  <img src="webrings.gif" alt="Web Rings">
-</div>
-<br>
-<div class="stars-row">
- <img src="stars.gif" alt="stars"> 
- <img src="stars.gif" alt="stars"> 
-</div>
-</body>
-</html>
+/* Таймер: числа белые и крупнее */
+.timer h2 {
+      color: #39FF14;
+      font-size: 72px; /* удвоено */
+      line-height: 1;
+      margin: 0;
+}
+
+/* Активная зелёная подсветка для заголовка и таймера */
+.activation-text {
+      color: #39FF14;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 8px;
+}
+
+.timer.green h2,
+.timer.green {
+      color: #39FF14;
+}
+
+.webrings-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+}
+.webrings-row img {
+      width: 112px; /* удвоено */
+      height: auto;
+      display: inline-block;
+}
+
+@media (max-width: 420px) {
+      .webrings-row img {
+            width: 80px; /* удвоено */
+      }
+}
+
+/* Stars row at the end */
+.stars-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+}
+.stars-row img {
+      width: 112px; /* удвоено */
+      height: auto;
+      display: inline-block;
+}
+
+@media (max-width: 420px) {
+      .stars-row img {
+            width: 72px; /* удвоено */
+      }
+}
+
+/* Responsive images and general tweaks */
+img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+}
+
+/* Reduce spacing on very small screens */
+@media (max-width: 420px) {
+      body {
+            font-size: 40px;
+      }
+      .countdown_timer {
+            gap: 1.5ch;
+      }
+      .timer h2 {
+            font-size: 56px;
+            margin: 0;
+      }
+}
+
+/* Исключение: faetalePu.gif оставляем без изменений */
+.faetale {
+  width: auto;
+  max-width: none;
+  height: auto;
+  display: inline-block;
+}
