@@ -13,11 +13,28 @@ body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start; /* start from top so верхние элементы видны */
       align-items: center;
-      padding: 10px;
+                  padding: 10px;
       font-size: 44px; /* увеличиваем текст в 2 раза */
       color: #000; /* основной цвет текста — чёрный */
+}
+
+html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+.content {
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* start from top */
+      align-items: center;
+      padding: 10px;
 }
 
 .countdown_timer {
